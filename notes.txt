@@ -6,3 +6,8 @@ Types of Middleware:
 Presentation Tier -- what users see and interact with.
 Application Tier -- Where logic lives. The application tier receives HTTP requests, routes them to the appropriate handlers, processes user input, interacts with the database, etc.
 Data Tier -- where information is stored, retrieved, and managed. 
+
+./ current directory
+../ previous directory
+../../ two previous
+/ root relative says start at this root file and let's work from there

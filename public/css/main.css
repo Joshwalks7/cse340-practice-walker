@@ -68,7 +68,22 @@ body {
             padding: 0;
         }
     }
+    #home-main {
+        display: grid;
+        grid-template-columns: 1fr;
+        justify-content: center;
+        padding: 10px;
+        img {
+            justify-self: center;
+        }
+    }
     p {
         padding: 20px;
+    }
+    footer {
+        text-align: center;
+        background-color: white;
+        height: 70px;
+        margin: 0;
     }
 }
