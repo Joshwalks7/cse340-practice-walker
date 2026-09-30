@@ -11,3 +11,12 @@ Data Tier -- where information is stored, retrieved, and managed.
 ../ previous directory
 ../../ two previous
 / root relative says start at this root file and let's work from there
+
+HTTP Status Codes
+100s Informational
+200s Success
+300s Redirection (ex, authentication required to view this page)
+400s Client Error
+500s Server Error
+
+function signature/header is the "app.use((err, req, res, next) => {})"

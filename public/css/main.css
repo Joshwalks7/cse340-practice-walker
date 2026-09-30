@@ -68,7 +68,7 @@ body {
             padding: 0;
         }
     }
-    #home-main {
+    main {
         display: grid;
         grid-template-columns: 1fr;
         justify-content: center;
