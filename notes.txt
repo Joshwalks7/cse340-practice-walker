@@ -20,3 +20,7 @@ HTTP Status Codes
 500s Server Error
 
 function signature/header is the "app.use((err, req, res, next) => {})"
+
+Model: Manages data and business logic – the "what" of your application
+View: Handles user interface and presentation – the "how" it looks
+Controller: Coordinates between Model and View – the "when" and "which"
