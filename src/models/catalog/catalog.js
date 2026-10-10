@@ -7,9 +7,9 @@ const courses = {
         description: 'Learn programming fundamentals using JavaScript and basic web development concepts.',
         credits: 3,
         sections: [
-            { time: '9:00 AM', room: 'STC 392', professor: 'Brother Jack' },
-            { time: '2:00 PM', room: 'STC 394', professor: 'Sister Enkey' },
-            { time: '11:00 AM', room: 'STC 390', professor: 'Brother Keers' }
+            { time: '9:00 AM', room: 'STC 392', professor: 'Brother Jack', professorId: 'brother-jack' },
+            { time: '2:00 PM', room: 'STC 394', professor: 'Sister Enkey', professorId: 'sister-enkey' },
+            { time: '11:00 AM', room: 'STC 390', professor: 'Brother Keers', professorId: 'brother-keers' }
         ]
     },
     'CS162': {
@@ -19,8 +19,8 @@ const courses = {
         description: 'Object-oriented programming concepts and software development practices.',
         credits: 3,
         sections: [
-            { time: '10:00 AM', room: 'STC 392', professor: 'Brother Jack' },
-            { time: '1:00 PM', room: 'STC 394', professor: 'Sister Enkey' }
+            { time: '10:00 AM', room: 'STC 392', professor: 'Brother Jack', professorId: 'brother-jack' },
+            { time: '1:00 PM', room: 'STC 394', professor: 'Sister Enkey', professorId: 'sister-enkey' }
         ]
     },
     'MATH113': {
@@ -30,9 +30,9 @@ const courses = {
         description: 'Fundamental algebra concepts including functions, polynomials, and equations.',
         credits: 3,
         sections: [
-            { time: '8:00 AM', room: 'STC 290', professor: 'Sister Peterson' },
-            { time: '11:00 AM', room: 'STC 292', professor: 'Brother Thompson' },
-            { time: '3:00 PM', room: 'STC 290', professor: 'Sister Anderson' }
+            { time: '8:00 AM', room: 'STC 290', professor: 'Sister Peterson', professorId: 'sister-peterson' },
+            { time: '11:00 AM', room: 'STC 292', professor: 'Brother Thompson', professorId: 'brother-thompson' },
+            { time: '3:00 PM', room: 'STC 290', professor: 'Sister Anderson', professorId: 'sister-anderson' }
         ]
     },
     'MATH119': {
@@ -42,8 +42,8 @@ const courses = {
         description: 'Introduction to differential and integral calculus with applications.',
         credits: 4,
         sections: [
-            { time: '9:00 AM', room: 'STC 290', professor: 'Brother Thompson' },
-            { time: '2:00 PM', room: 'STC 292', professor: 'Sister Anderson' }
+            { time: '9:00 AM', room: 'STC 290', professor: 'Brother Thompson', professorId: 'brother-thompson' },
+            { time: '2:00 PM', room: 'STC 292', professor: 'Sister Anderson', professorId: 'sister-anderson' }
         ]
     },
     'ENG101': {
@@ -53,9 +53,9 @@ const courses = {
         description: 'Develop writing skills for academic and professional communication.',
         credits: 3,
         sections: [
-            { time: '10:00 AM', room: 'GEB 201', professor: 'Sister Anderson' },
-            { time: '12:00 PM', room: 'GEB 205', professor: 'Brother Davis' },
-            { time: '4:00 PM', room: 'GEB 203', professor: 'Sister Enkey' }
+            { time: '10:00 AM', room: 'GEB 201', professor: 'Sister Anderson', professorId: 'sister-anderson' },
+            { time: '12:00 PM', room: 'GEB 205', professor: 'Brother Davis', professorId: 'brother-davis' },
+            { time: '4:00 PM', room: 'GEB 203', professor: 'Sister Enkey', professorId: 'sister-enkey' }
         ]
     },
     'ENG102': {
@@ -65,8 +65,8 @@ const courses = {
         description: 'Advanced writing skills through the study of literature and critical analysis.',
         credits: 3,
         sections: [
-            { time: '11:00 AM', room: 'GEB 201', professor: 'Brother Davis' },
-            { time: '1:00 PM', room: 'GEB 205', professor: 'Sister Enkey' }
+            { time: '11:00 AM', room: 'GEB 201', professor: 'Brother Davis', professorId: 'brother-davis' },
+            { time: '1:00 PM', room: 'GEB 205', professor: 'Sister Enkey', professorId: 'sister-enkey' }
         ]
     },
     'HIST105': {
@@ -76,8 +76,8 @@ const courses = {
         description: 'Survey of world civilizations from ancient times to the present.',
         credits: 3,
         sections: [
-            { time: '9:00 AM', room: 'GEB 301', professor: 'Brother Wilson' },
-            { time: '2:00 PM', room: 'GEB 305', professor: 'Sister Roberts' }
+            { time: '9:00 AM', room: 'GEB 301', professor: 'Brother Wilson', professorId: 'brother-wilson' },
+            { time: '2:00 PM', room: 'GEB 305', professor: 'Sister Roberts', professorId: 'sister-roberts' }
         ]
     }
 };
