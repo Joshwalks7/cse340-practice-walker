@@ -67,8 +67,15 @@ const processLogin = async (req, res) => {
 
         // TODO: Store user in session: req.session.user = user
         req.session.user = user;
-        // TODO: Redirect to /dashboard
-        res.redirect('/dashboard');
+        // Ensure the session is written before the redirect is followed.
+        req.session.save((error) => {
+            if (error) {
+                console.error('Error saving login session:', error);
+                return res.redirect('/login');
+            }
+
+            res.redirect('/dashboard');
+        });
     } catch (error) {
         // Model functions do not catch errors, so handle them here
         // TODO: Log error to console

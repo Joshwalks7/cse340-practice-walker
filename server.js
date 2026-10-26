@@ -23,6 +23,10 @@ const PORT = process.env.PORT || 3000;
  */
 const app = express();
 
+// Render terminates HTTPS at its reverse proxy. Trusting the proxy allows
+// express-session to set secure cookies correctly in production.
+app.set('trust proxy', 1);
+
 // Initialize PostgreSQL session store
 const pgSession = connectPgSimple(session);
 
