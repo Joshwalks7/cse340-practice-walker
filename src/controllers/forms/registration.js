@@ -53,7 +53,9 @@ const processRegistration = async (req, res) => {
 
     if (!errors.isEmpty()) {
         // TODO: Log validation errors to console for debugging
-        console.error('Validation errors:', errors.array());
+        errors.array().forEach(error => {
+            req.flash('error', error.msg);
+        })
         // TODO: Redirect back to /register
         return res.redirect('/register');
     }
@@ -69,7 +71,7 @@ const processRegistration = async (req, res) => {
 
         if (emailCheck) {
             // TODO: Log message: 'Email already registered'
-            console.error('Email already registered');
+            req.flash('warning', 'Email already linked to an account');
             // TODO: Redirect back to /register
             return res.redirect('/register');
         }
@@ -84,13 +86,13 @@ const processRegistration = async (req, res) => {
         await saveUser(name, email, hashedPassword);
 
         // TODO: Log success message to console
-        console.log('User successfully created');
-        // TODO: Redirect to /register/list to show successful registration
-        res.redirect('/register/list');
+        req.flash('success', 'Account successfully created');
+        res.redirect('/login');
         // NOTE: Later when we add authentication, we'll change this to require login first
     } catch (error) {
         // TODO: Log the error to console
         console.error('Error saving user:', error);
+        req.flash('error', 'Unable to create account. Please try again later.');
         // TODO: Redirect back to /register
         res.redirect('/register');
     }
