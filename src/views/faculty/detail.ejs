@@ -1,22 +1,26 @@
 <%- include('../partials/header') %>
 <main>
+    <section class="faculty-container">
     <div class="faculty-profile">
-        <h1><%= faculty.name %></h1>
-        <p class="faculty-title"><%= faculty.title %></p>
-        <p class="faculty-department"><%= faculty.department %> Department</p>
-    </div>
+        <p><img src="/images/faculty/<%= faculty.slug %>.jpg" alt="<%= faculty.name %>" class="faculty-photo"></p>
+        <div class="detail-grid">
+            <h1><%= faculty.name %></h1>
+            <p class="faculty-title"><%= faculty.title %></p>
+            <p class="faculty-department"><%= faculty.department %> Department</p>
     
-    <div class="faculty-contact">
-        <h2>Contact Information</h2>
-        <div class="contact-details">
-            <div class="contact-item">
-                <strong>Office:</strong> <%= faculty.office %>
-            </div>
-            <div class="contact-item">
-                <strong>Phone:</strong> <a href="tel:<%= faculty.phone %>"><%= faculty.phone %></a>
-            </div>
-            <div class="contact-item">
-                <strong>Email:</strong> <a href="mailto:<%= faculty.email %>"><%= faculty.email %></a>
+            <div class="faculty-contact">
+                <h2>Contact Information</h2>
+                <div class="contact-details">
+                    <div class="contact-item">
+                        <strong>Office:</strong> <%= faculty.office %>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Phone:</strong> <a href="tel:<%= faculty.phone %>"><%= faculty.phone %></a>
+                    </div>
+                    <div class="contact-item">
+                        <strong>Email:</strong> <a href="mailto:<%= faculty.email %>"><%= faculty.email %></a>
+                    </div>
+                </div>
             </div>
         </div>
     </div>
@@ -24,5 +28,6 @@
     <div class="navigation">
         <p><a href="/faculty">&larr; Back to Faculty Directory</a></p>
     </div>
+    </section>
 </main>
 <%- include('../partials/footer') %>

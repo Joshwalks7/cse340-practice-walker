@@ -15,6 +15,7 @@
             <div class="faculty-card">
                 <h3><a href="/faculty/<%= member.slug %>"><%= member.name %></a></h3>
                 <p class="faculty-title"><%= member.title %></p>
+                <img src="/images/faculty/<%= member.slug %>.jpg" alt="<%= member.name %>" class="faculty-photo">
                 <p class="faculty-department"><%= member.department %></p>
             </div>
         <% }); %>
