@@ -69,14 +69,14 @@ const processRegistration = async (req, res) => {
 
         // TODO: Log success message to console
         req.flash('success', 'Account successfully created');
-        res.redirect('/login');
+        return res.redirect('/login');
         // NOTE: Later when we add authentication, we'll change this to require login first
     } catch (error) {
         // TODO: Log the error to console
         console.error('Error saving user:', error);
         req.flash('error', 'Unable to create account. Please try again later.');
         // TODO: Redirect back to /register
-        res.redirect('/register');
+        return res.redirect('/register');
     }
 };
 
